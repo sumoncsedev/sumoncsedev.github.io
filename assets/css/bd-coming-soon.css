@@ -20,13 +20,18 @@ body {
   color: #ffffff;
   background-color: #000000;
   border-radius: 0px;
+  padding: 10px 10px;
   text-align: center;
 }
 .txt {
-  color: #000000;
+  color: #ffffff;
   font: optional;
   font-style: bold;
+  font-size: 20px;
+  max-width: 200px;
+  background-color: #3a3c42;
   text-align: center;
+  padding: 10px 10px;
 }
 
 .navbar-dark {
