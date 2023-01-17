@@ -1,0 +1,99 @@
+body {
+    color: #000000;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    margin: 0;
+}
+/* unvisited link */
+a:link {
+    color: rgb(254, 123, 1);
+  }
+  
+  /* visited link */
+  a:visited {
+    color: green;
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: #34ab59;
+    background-color: rgb(255, 255, 255);
+  }
+
+  
+  /* selected link */
+  a:active {
+    color: yellow;
+  } 
+
+
+.x {
+    background-color: #ffffff;
+    color: #000000;
+    text-align: center;
+
+}
+.y {
+    background-color: #34ab59;
+    color: #ffffff;
+    text-align: center;
+    font-style: bold;
+    position: relative;
+    padding: auto;
+}
+h1 {
+    font-size: 36px;
+    background-color: #1bc952;
+    color: #ffffff;
+    text-align: center;
+    font-style: bold;
+    position: relative;
+}
+
+caption {
+    font-size: 18px;
+    font-style: bold;
+    position: relative;
+    text-align: center;
+    background-color: #282828;
+    color: #ffffff;
+    padding: 4px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th{
+        border: 1px solid rgb(255, 255, 255);
+        background-color: rgb(62, 139, 131);
+        color: white;
+    
+    }
+td{
+        border: 1px solid rgb(0, 0, 0);
+        background-color: rgb(255, 255, 255);
+        color: #000000;
+        position: relative;
+        text-align: center;
+    }
+
+.m{
+    color: #000000;
+    text-align: center;
+    font-style: bold;
+    position: relative;
+    padding: 4px;
+}
+
+.footer {
+    background-color: #282828;
+    color: #ffffff;
+    text-align: center;
+    font-style: bold;
+    position: relative;
+    padding: 4px;
+}
+/* Path: style.css */
