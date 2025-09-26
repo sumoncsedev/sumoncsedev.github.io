@@ -16,33 +16,41 @@
 
 
             // --- Custom Cursor Logic ---
-            const cursorDot = document.querySelector('.cursor-dot');
-            const cursorOutline = document.querySelector('.cursor-outline');
+            // Check if the device is a touch device
+            const isTouchDevice = () => {
+                return 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+            }
 
-            window.addEventListener('mousemove', (e) => {
-                const posX = e.clientX;
-                const posY = e.clientY;
+            if (!isTouchDevice()) {
+                const cursorDot = document.querySelector('.cursor-dot');
+                const cursorOutline = document.querySelector('.cursor-outline');
 
-                cursorDot.style.left = `${posX}px`;
-                cursorDot.style.top = `${posY}px`;
+                window.addEventListener('mousemove', (e) => {
+                    const posX = e.clientX;
+                    const posY = e.clientY;
 
-                cursorOutline.animate({
-                    left: `${posX}px`,
-                    top: `${posY}px`
-                }, { duration: 500, fill: "forwards" });
-            });
+                    cursorDot.style.left = `${posX}px`;
+                    cursorDot.style.top = `${posY}px`;
 
-            const interactiveElements = document.querySelectorAll('a, button');
-            interactiveElements.forEach(el => {
-                el.addEventListener('mouseover', () => {
-                    cursorDot.classList.add('hovered');
-                    cursorOutline.classList.add('hovered');
+                    cursorOutline.animate({
+                        left: `${posX}px`,
+                        top: `${posY}px`
+                    }, { duration: 500, fill: "forwards" });
                 });
-                el.addEventListener('mouseleave', () => {
-                    cursorDot.classList.remove('hovered');
-                    cursorOutline.classList.remove('hovered');
+
+                const interactiveElements = document.querySelectorAll('a, button');
+                interactiveElements.forEach(el => {
+                    el.addEventListener('mouseover', () => {
+                        cursorDot.classList.add('hovered');
+                        cursorOutline.classList.add('hovered');
+                    });
+                    el.addEventListener('mouseleave', () => {
+                        cursorDot.classList.remove('hovered');
+                        cursorOutline.classList.remove('hovered');
+                    });
                 });
-            });
+            }
+
 
             // --- Scroll-triggered Animations Logic ---
             const observer = new IntersectionObserver((entries) => {
@@ -81,7 +89,9 @@
             sliderContainer.addEventListener('mouseleave', startSlider);
             
             startSlider();
-
+            // --- Auto-update Footer Year ---
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+            
             // --- Contact Form Logic ---
             const form = document.getElementById('contact-form');
             const formStatus = document.getElementById('form-status');

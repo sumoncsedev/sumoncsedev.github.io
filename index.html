@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/dir/style.css" class="css">
+    <link rel="icon" type="image/png" href="/dir/images/icons/favicon.png">
 </head>
 
 <body class="antialiased">
@@ -29,11 +30,9 @@
                     <a href="#projects" class="text-slate-300 hover:text-blue-500 transition-colors">Projects</a>
                     <a href="#skills" class="text-slate-300 hover:text-blue-500 transition-colors">Skills</a>
                     <a href="#education" class="text-slate-300 hover:text-blue-500 transition-colors">Education</a>
-                    <a href="#testimonials"
-                        class="text-slate-300 hover:text-blue-500 transition-colors">Testimonials</a>
-                    <a href="#blog" class="text-slate-300 hover:text-blue-500 transition-colors">Blog</a>
+                    <a href="#testimonials" class="text-slate-300 hover:text-blue-500 transition-colors">Testimonials</a>
                 </div>
-                <a href="#contact"
+                <a href="https://api.whatsapp.com/send?phone=+8801310227710&text=Hello%2C%20I%20would%20like%20to%20hire%20you!"
                     class="bg-blue-500 text-white font-bold py-2 px-6 rounded-full hover:scale-105 transition-transform">
                     Hire Me
                 </a>
@@ -50,21 +49,24 @@
 
     <div class="relative z-10">
         <!-- Header & Hero Section -->
-        <header id="hero" class="min-h-screen flex flex-col items-center justify-center text-center p-4">
+        <header id="hero" class="relative min-h-screen flex flex-col items-center justify-center text-center p-4">
             <div class="reveal">
                 <p class="text-lg md:text-xl text-blue-400 mb-4 font-medium">Welcome to my Digital Playground!</p>
-                <h1
-                    class="text-4xl md:text-7xl font-black tracking-tighter mb-4 bg-clip-text text-transparent bg-gradient-to-r from-slate-200 to-slate-400">
+                <h1 class="text-4xl md:text-7xl font-black tracking-tighter mb-4 bg-clip-text text-transparent bg-gradient-to-r from-slate-200 to-slate-400">
                     Ahsanur Rahman Sumon
                 </h1>
                 <p class="text-xl md:text-2xl text-slate-300 max-w-3xl mx-auto">
-                    A Creative Frontend Developer passionate about building beautiful, interactive, and accessible web
-                    experiences.
+                    A Creative Frontend Developer passionate about building beautiful, interactive, and accessible web experiences.
                 </p>
-                <a href="#projects"
-                    class="mt-8 inline-block bg-blue-500 text-white font-bold py-3 px-8 rounded-full text-lg hover:scale-105 transition-transform">
-                    Explore My Work
+                <a href="#projects" class="mt-8 inline-block bg-blue-500 text-white font-bold py-3 px-8 rounded-full text-lg hover:scale-105 transition-transform">
+                    Explore
                 </a>
+            </div>
+             <!-- Scroll Down Indicator -->
+            <div class="absolute bottom-10 left-1/2 -translate-x-1/2">
+                <div class="w-8 h-12 border-2 border-slate-400 rounded-full flex justify-center items-start p-1 animate-bounce">
+                    <div class="w-1 h-2 bg-slate-400 rounded-full animate-scroll-wheel"></div>
+                </div>
             </div>
         </header>
 
@@ -78,23 +80,22 @@
                     <!-- Project Card 1 -->
                     <div class="glass-card rounded-2xl reveal overflow-hidden">
                         <img class="w-full h-48 object-cover"
-                            src="https://placehold.co/600x400/0a0a0a/3b82f6?text=Project+One"
+                            src="/dir/images/project-images/project-01(ISP).png"
                             alt="Project One Thumbnail">
                         <div class="p-6 flex flex-col h-[calc(100%-12rem)]">
-                            <h3 class="text-2xl font-bold mb-2 text-blue-500">Project One</h3>
-                            <p class="text-slate-400 mb-4 flex-grow">A brief but engaging description of the project,
-                                highlighting the key technologies and my role.</p>
+                            <h3 class="text-2xl font-bold mb-2 text-blue-500">ISP Website</h3>
+                            <p class="text-slate-400 mb-4 flex-grow">AeroNet is a modern, fully responsive, and professional static website designed for a fictional Internet Service Provider based in Dhaka, Bangladesh..</p>
                             <div class="flex flex-wrap gap-2 mb-6">
                                 <span
-                                    class="bg-gray-700 text-slate-300 text-xs font-semibold px-2.5 py-1 rounded-full">React</span>
+                                    class="bg-gray-700 text-slate-300 text-xs font-semibold px-2.5 py-1 rounded-full">HTML</span>
                                 <span
                                     class="bg-gray-700 text-slate-300 text-xs font-semibold px-2.5 py-1 rounded-full">Tailwind
                                     CSS</span>
                                 <span
-                                    class="bg-gray-700 text-slate-300 text-xs font-semibold px-2.5 py-1 rounded-full">Firebase</span>
+                                    class="bg-gray-700 text-slate-300 text-xs font-semibold px-2.5 py-1 rounded-full">JS</span>
                             </div>
                             <div class="flex items-center gap-4 mt-auto">
-                                <a href="#"
+                                <a href="https://ahsanurrahmansumon.github.io/AreoNet/"
                                     class="flex-1 text-center bg-blue-500 text-white font-bold py-2 px-4 rounded-full hover:scale-105 transition-transform flex items-center justify-center gap-2">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
                                         fill="currentColor">
@@ -105,7 +106,7 @@
                                     </svg>
                                     Live Demo
                                 </a>
-                                <a href="#"
+                                <a href="https://github.com/ahsanurrahmansumon/AreoNet"
                                     class="flex-1 text-center border-2 border-slate-500 text-slate-300 font-bold py-2 px-4 rounded-full hover:bg-slate-700 hover:border-slate-700 transition-colors flex items-center justify-center gap-2">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24"
                                         fill="currentColor">
@@ -121,22 +122,21 @@
                     <!-- Project Card 2 -->
                     <div class="glass-card rounded-2xl reveal overflow-hidden" style="transition-delay: 100ms;">
                         <img class="w-full h-48 object-cover"
-                            src="https://placehold.co/600x400/0a0a0a/3b82f6?text=Project+Two"
+                            src="/dir/images/project-images/project-02(E).png"
                             alt="Project Two Thumbnail">
                         <div class="p-6 flex flex-col h-[calc(100%-12rem)]">
-                            <h3 class="text-2xl font-bold mb-2 text-blue-500">Project Two</h3>
-                            <p class="text-slate-400 mb-4 flex-grow">A different project that showcases another skill,
-                                like a complex animation or a data visualization.</p>
+                            <h3 class="text-2xl font-bold mb-2 text-blue-500">E-commerce web</h3>
+                            <p class="text-slate-400 mb-4 flex-grow">FlashCart is a sleek, responsive e-commerce web application designed to deliver a seamless shopping experience.</p>
                             <div class="flex flex-wrap gap-2 mb-6">
                                 <span
-                                    class="bg-gray-700 text-slate-300 text-xs font-semibold px-2.5 py-1 rounded-full">Vue.js</span>
+                                    class="bg-gray-700 text-slate-300 text-xs font-semibold px-2.5 py-1 rounded-full">HTML</span>
                                 <span
-                                    class="bg-gray-700 text-slate-300 text-xs font-semibold px-2.5 py-1 rounded-full">D3.js</span>
+                                    class="bg-gray-700 text-slate-300 text-xs font-semibold px-2.5 py-1 rounded-full">Tailwind CSS</span>
                                 <span
-                                    class="bg-gray-700 text-slate-300 text-xs font-semibold px-2.5 py-1 rounded-full">GSAP</span>
+                                    class="bg-gray-700 text-slate-300 text-xs font-semibold px-2.5 py-1 rounded-full">JS</span>
                             </div>
                             <div class="flex items-center gap-4 mt-auto">
-                                <a href="#"
+                                <a href="https://ahsanurrahmansumon.github.io/FlashCart/"
                                     class="flex-1 text-center bg-blue-500 text-white font-bold py-2 px-4 rounded-full hover:scale-105 transition-transform flex items-center justify-center gap-2">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
                                         fill="currentColor">
@@ -147,7 +147,7 @@
                                     </svg>
                                     Live Demo
                                 </a>
-                                <a href="#"
+                                <a href="https://github.com/ahsanurrahmansumon/FlashCart"
                                     class="flex-1 text-center border-2 border-slate-500 text-slate-300 font-bold py-2 px-4 rounded-full hover:bg-slate-700 hover:border-slate-700 transition-colors flex items-center justify-center gap-2">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24"
                                         fill="currentColor">
@@ -163,23 +163,21 @@
                     <!-- Project Card 3 -->
                     <div class="glass-card rounded-2xl reveal overflow-hidden" style="transition-delay: 200ms;">
                         <img class="w-full h-48 object-cover"
-                            src="https://placehold.co/600x400/0a0a0a/3b82f6?text=Project+Three"
+                            src="/dir/images/project-images/project-03(BGPT).png"
                             alt="Project Three Thumbnail">
                         <div class="p-6 flex flex-col h-[calc(100%-12rem)]">
-                            <h3 class="text-2xl font-bold mb-2 text-blue-500">Project Three</h3>
-                            <p class="text-slate-400 mb-4 flex-grow">A third project to demonstrate versatility, maybe a
-                                backend integration or a unique UI concept.</p>
+                            <h3 class="text-2xl font-bold mb-2 text-blue-500">BanglaGPT</h3>
+                            <p class="text-slate-400 mb-4 flex-grow">BanglaGPT is a conversational AI assistant designed to interact with users in Bangla, offering natural language support across a wide range of tasks. </p>
                             <div class="flex flex-wrap gap-2 mb-6">
                                 <span
-                                    class="bg-gray-700 text-slate-300 text-xs font-semibold px-2.5 py-1 rounded-full">Next.js</span>
+                                    class="bg-gray-700 text-slate-300 text-xs font-semibold px-2.5 py-1 rounded-full">HTML</span>
                                 <span
-                                    class="bg-gray-700 text-slate-300 text-xs font-semibold px-2.5 py-1 rounded-full">Three.js</span>
+                                    class="bg-gray-700 text-slate-300 text-xs font-semibold px-2.5 py-1 rounded-full">Js</span>
                                 <span
-                                    class="bg-gray-700 text-slate-300 text-xs font-semibold px-2.5 py-1 rounded-full">Framer
-                                    Motion</span>
+                                    class="bg-gray-700 text-slate-300 text-xs font-semibold px-2.5 py-1 rounded-full">Tailwind CSS</span>
                             </div>
                             <div class="flex items-center gap-4 mt-auto">
-                                <a href="#"
+                                <a href="https://ahsanurrahmansumon.github.io/BanglaGPT/"
                                     class="flex-1 text-center bg-blue-500 text-white font-bold py-2 px-4 rounded-full hover:scale-105 transition-transform flex items-center justify-center gap-2">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
                                         fill="currentColor">
@@ -190,7 +188,7 @@
                                     </svg>
                                     Live Demo
                                 </a>
-                                <a href="#"
+                                <a href="https://github.com/ahsanurrahmansumon/BanglaGPT"
                                     class="flex-1 text-center border-2 border-slate-500 text-slate-300 font-bold py-2 px-4 rounded-full hover:bg-slate-700 hover:border-slate-700 transition-colors flex items-center justify-center gap-2">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24"
                                         fill="currentColor">
@@ -205,11 +203,11 @@
                     </div>
                 </div>
             </section>
-
+            
             <!-- Skills Section -->
             <section id="skills" class="py-16">
                 <div class="text-center mb-12 reveal">
-                    <h2 class="text-4xl font-bold">My Skills</h2>
+                    <h2 class="text-4xl font-bold">My Toolkit</h2>
                 </div>
 
                 <!-- Frontend Skills -->
@@ -217,50 +215,27 @@
                     <h3 class="text-2xl font-bold text-center mb-8 reveal">Frontend</h3>
                     <div class="max-w-4xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-8 text-center">
                         <div class="flex flex-col items-center justify-center p-4 glass-card rounded-2xl reveal">
-                            <svg class="w-12 h-12 mb-2 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
-                                <path
-                                    d="M1.946 0l1.715 19.198 8.339 2.802 8.339-2.802 1.715-19.198h-20.108zm16.149 6.338h-10.2l.213 2.404h9.774l-.698 7.794-5.238 1.455v.001h-.001l-5.237-1.455-.36-4.02h2.379l.18 2.016 3.038.826.001-.001 3.037-.826.315-3.522h-9.948l-.75-8.412h12.518l-.213 2.365z" />
-                            </svg>
+                            <img class="w-12 h-12 mb-2 rounded-md" src="/dir/images/icons/html-5.png" alt="HTML5 Icon">
                             <p class="font-bold mt-2">HTML</p>
                         </div>
-                        <div class="flex flex-col items-center justify-center p-4 glass-card rounded-2xl reveal"
-                            style="transition-delay: 50ms;">
-                            <svg class="w-12 h-12 mb-2 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
-                                <path
-                                    d="M1.954 0l1.714 19.192 8.332 2.808 8.339-2.808 1.715-19.192h-20.1zM18.046 6.337h-4.326l.186 2.08h3.953l-.697 7.792-5.162 1.457v.001h-.001l-5.165-1.457-.358-4.01h2.378l.181 2.015 2.964.825.001-.001 2.964-.825.316-3.521h-6.28l-.18-2.08h6.64l.21-2.364h-9.353l-.748-8.41h14.888l-.21 2.364z" />
-                            </svg>
+                        <div class="flex flex-col items-center justify-center p-4 glass-card rounded-2xl reveal" style="transition-delay: 50ms;">
+                            <img class="w-12 h-12 mb-2 rounded-md" src="/dir/images/icons/css-3.png" alt="CSS3 Icon">
                             <p class="font-bold mt-2">CSS</p>
                         </div>
-                        <div class="flex flex-col items-center justify-center p-4 glass-card rounded-2xl reveal"
-                            style="transition-delay: 100ms;">
-                            <svg class="w-12 h-12 mb-2 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
-                                <path
-                                    d="M22.031 2.969c-1.281-1.281-2.969-1.969-4.75-1.969h-10.562c-1.781 0-3.469.688-4.75 1.969s-1.969 2.969-1.969 4.75v10.562c0 1.781.688 3.469 1.969 4.75s2.969 1.969 4.75 1.969h10.563c1.781 0 3.469-.688 4.75-1.969s1.969-2.969 1.969-4.75v-10.563c0-1.781-.688-3.469-1.969-4.75zm-3.141 11.234h-2.344v2.344h-2.906v-2.344h-2.906v-2.797h2.906v-2.344h2.906v2.344h2.344v2.797z" />
-                            </svg>
+                        <div class="flex flex-col items-center justify-center p-4 glass-card rounded-2xl reveal" style="transition-delay: 100ms;">
+                            <img class="w-12 h-12 mb-2 rounded-md" src="/dir/images/icons/bootstrap.png" alt="Bootstrap Icon">
                             <p class="font-bold mt-2">Bootstrap</p>
                         </div>
-                        <div class="flex flex-col items-center justify-center p-4 glass-card rounded-2xl reveal"
-                            style="transition-delay: 150ms;">
-                            <svg class="w-12 h-12 mb-2 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
-                                <path
-                                    d="M12 1.5c-5.799 0-10.5 4.701-10.5 10.5s4.701 10.5 10.5 10.5 10.5-4.701 10.5-10.5-4.701-10.5-10.5-10.5zm-5.242 12.375c.18.15.42.225.66.225s.48-.075.66-.225l2.922-2.433 2.922 2.433c.18.15.42.225.66.225s.48-.075.66-.225c.36-.3.36-.78 0-1.08l-2.922-2.433 2.922-2.433c.36-.3.36-.78 0-1.08s-.96-.3-1.32 0l-2.922 2.433-2.922-2.433c-.36-.3-.96-.3-1.32 0s-.36.78 0 1.08l2.922 2.433-2.922 2.433c-.36.3-.36.78 0 1.08z" />
-                            </svg>
+                        <div class="flex flex-col items-center justify-center p-4 glass-card rounded-2xl reveal" style="transition-delay: 150ms;">
+                            <img class="w-12 h-12 mb-2 rounded-md" src="/dir/images/icons/Tailwind_CSS_Logo.svg.png" alt="Tailwind CSS Icon">
                             <p class="font-bold mt-2">Tailwind CSS</p>
                         </div>
-                        <div class="flex flex-col items-center justify-center p-4 glass-card rounded-2xl reveal"
-                            style="transition-delay: 200ms;">
-                            <svg class="w-12 h-12 mb-2 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
-                                <path
-                                    d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-3 18.25c-.69 0-1.25-.56-1.25-1.25s.56-1.25 1.25-1.25 1.25.56 1.25 1.25-.56 1.25-1.25 1.25zm6 0c-.69 0-1.25-.56-1.25-1.25s.56-1.25 1.25-1.25 1.25.56 1.25 1.25-.56 1.25-1.25 1.25zm4-5h-14v-9h14v9z" />
-                            </svg>
+                        <div class="flex flex-col items-center justify-center p-4 glass-card rounded-2xl reveal" style="transition-delay: 200ms;">
+                            <img class="w-12 h-12 mb-2 rounded-md" src="/dir/images/icons/js.png" alt="JavaScript Icon">
                             <p class="font-bold mt-2">JavaScript</p>
                         </div>
-                        <div class="flex flex-col items-center justify-center p-4 glass-card rounded-2xl reveal"
-                            style="transition-delay: 250ms;">
-                            <svg class="w-12 h-12 mb-2 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
-                                <path
-                                    d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2.5 13.993c-.499 0-.962-.184-1.325-.494l-2.675-2.228-1.325.495-2.175-1.812 6-5.003 2.175 1.812-2.35 1.958 2.675 2.228c.675.562.775 1.612.212 2.288-.363.437-.899.66-1.437.66zm5 0c-.499 0-.962-.184-1.325-.494l-2.675-2.228-1.325.495-2.175-1.812 6-5.003 2.175 1.812-2.35 1.958 2.675 2.228c.675.562.775 1.612.212 2.288-.363.437-.899.66-1.437.66z" />
-                            </svg>
+                        <div class="flex flex-col items-center justify-center p-4 glass-card rounded-2xl reveal" style="transition-delay: 250ms;">
+                            <img class="w-12 h-12 mb-2 rounded-md" src="/dir/images/icons/React-icon.svg.png" alt="React Js Icon">
                             <p class="font-bold mt-2">React Js</p>
                         </div>
                     </div>
@@ -271,33 +246,19 @@
                     <h3 class="text-2xl font-bold text-center mb-8 reveal">Applications & Tools</h3>
                     <div class="max-w-4xl mx-auto grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-8 text-center">
                         <div class="flex flex-col items-center justify-center p-4 glass-card rounded-2xl reveal">
-                            <svg class="w-12 h-12 mb-2 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
-                                <path
-                                    d="M21.414 6.586l-4.999-4.999c-.781-.781-2.047-.781-2.828 0l-1.001 1.001 7.828 7.828 1-1c.781-.781.781-2.047 0-2.828zm-15.001 7.828l-1.414-1.414 7.414-7.414 1.414 1.414-7.414 7.414zm-4.413 4.586h2c.265 0 .52-.105.707-.293l1.414-1.414-1.414-1.414-1.414 1.414c-.188.188-.293.442-.293.707v1z" />
-                            </svg>
+                            <img class="w-12 h-12 mb-2 rounded-md" src="/dir/images/icons/visual-studio-code-icon.png" alt="VS Code Icon">
                             <p class="font-bold mt-2">VS Code</p>
                         </div>
-                        <div class="flex flex-col items-center justify-center p-4 glass-card rounded-2xl reveal"
-                            style="transition-delay: 50ms;">
-                            <svg class="w-12 h-12 mb-2 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
-                                <path
-                                    d="M19 2h-14c-1.104 0-2 .896-2 2v16c0 1.104.896 2 2 2h14c1.104 0 2-.896 2-2v-16c0-1.104-.896-2-2-2zm-3 14h-8v-2h8v2zm0-4h-8v-2h8v2zm0-4h-8v-2h8v2z" />
-                            </svg>
+                        <div class="flex flex-col items-center justify-center p-4 glass-card rounded-2xl reveal" style="transition-delay: 50ms;">
+                            <img class="w-12 h-12 mb-2 rounded-md" src="https://placehold.co/64x64/0a0a0a/3b82f6?text=N%2B%2B" alt="Notepad++ Icon">
                             <p class="font-bold mt-2">Notepad++</p>
                         </div>
-                        <div class="flex flex-col items-center justify-center p-4 glass-card rounded-2xl reveal"
-                            style="transition-delay: 100ms;">
-                            <svg class="w-12 h-12 mb-2 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
-                                <path
-                                    d="M12 0l-12 6.923v6.154l12 6.923 12-6.923v-6.154l-12-6.923zm-6 8.308l6 3.461 6-3.461-6-3.461-6 3.461z" />
-                            </svg>
+                        <div class="flex flex-col items-center justify-center p-4 glass-card rounded-2xl reveal" style="transition-delay: 100ms;">
+                            <img class="w-12 h-12 mb-2 rounded-md" src="/dir/images/icons/netlify.png" alt="Netlify Icon">
                             <p class="font-bold mt-2">Netlify</p>
                         </div>
-                        <div class="flex flex-col items-center justify-center p-4 glass-card rounded-2xl reveal"
-                            style="transition-delay: 150ms;">
-                            <svg class="w-12 h-12 mb-2 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 2l-12 20h24l-12-20z" />
-                            </svg>
+                        <div class="flex flex-col items-center justify-center p-4 glass-card rounded-2xl reveal" style="transition-delay: 150ms;">
+                            <img class="w-12 h-12 mb-2 rounded-md" src="/dir/images/icons/vercel.png" alt="Vercel Icon">
                             <p class="font-bold mt-2">Vercel</p>
                         </div>
                     </div>
@@ -308,27 +269,15 @@
                     <h3 class="text-2xl font-bold text-center mb-8 reveal">Database & Version Control</h3>
                     <div class="max-w-4xl mx-auto grid grid-cols-2 sm:grid-cols-3 gap-8 text-center">
                         <div class="flex flex-col items-center justify-center p-4 glass-card rounded-2xl reveal">
-                            <svg class="w-12 h-12 mb-2 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
-                                <path
-                                    d="M12 2c-4.411 0-8 1.791-8 4v12c0 2.209 3.589 4 8 4s8-1.791 8-4v-12c0-2.209-3.589-4-8-4zm0 2c3.309 0 6 1.346 6 3s-2.691 3-6 3-6-1.346-6-3 2.691-3 6-3zm-6 7h12v3c0 1.654-2.691 3-6 3s-6-1.346-6-3v-3z" />
-                            </svg>
+                            <img class="w-12 h-12 mb-2 rounded-md" src="/dir/images/icons/mysql.png" alt="MySQL Icon">
                             <p class="font-bold mt-2">MySQL</p>
                         </div>
-                        <div class="flex flex-col items-center justify-center p-4 glass-card rounded-2xl reveal"
-                            style="transition-delay: 50ms;">
-                            <svg class="w-12 h-12 mb-2 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
-                                <path
-                                    d="M24 10.306c0-1.298-1.25-2.311-2.827-2.311-1.037 0-1.921.434-2.433 1.092-.289-1.896-1.921-3.328-3.921-3.328-1.999 0-3.633 1.433-3.921 3.328-.512-.658-1.396-1.092-2.433-1.092-1.577 0-2.827 1.013-2.827 2.311 0 .991.758 1.833 1.81 2.155-.07.382-.112.776-.112 1.181 0 2.768 2.232 5.011 4.989 5.101v2.327l-2.228 1.48c-.289.193-.454.514-.454.856 0 .551.449 1 .999 1h7.989c.551 0 .999-.449.999-1 0-.342-.165-.663-.454-.856l-2.228-1.48v-2.327c2.757-.09 4.989-2.333 4.989-5.101 0-.404-.043-.798-.112-1.181 1.052-.322 1.81-1.165 1.81-2.155z" />
-                            </svg>
+                        <div class="flex flex-col items-center justify-center p-4 glass-card rounded-2xl reveal" style="transition-delay: 50ms;">
+                            <img class="w-12 h-12 mb-2 rounded-md" src="/dir/images/icons/git.png" alt="Git Icon">
                             <p class="font-bold mt-2">Git</p>
                         </div>
-                        <div class="flex flex-col items-center justify-center p-4 glass-card rounded-2xl reveal"
-                            style="transition-delay: 100ms;">
-                            <svg class="w-12 h-12 mb-2 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
-                                <path fill-rule="evenodd"
-                                    d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.49.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z"
-                                    clip-rule="evenodd" />
-                            </svg>
+                        <div class="flex flex-col items-center justify-center p-4 glass-card rounded-2xl reveal" style="transition-delay: 100ms;">
+                            <img class="w-12 h-12 mb-2 rounded-md" src="/dir/images/icons/github.png" alt="GitHub Icon">
                             <p class="font-bold mt-2">GitHub</p>
                         </div>
                     </div>
@@ -357,7 +306,7 @@
                     </div>
                 </div>
                 <div class="text-center mt-12 reveal">
-                    <a href="/path/to/your/cv.pdf" download="AhsanurRahmanSumon-CV.pdf"
+                    <a href="/dir/download/AHSANUR RAHMAN SUMON CV.pdf" download="AhsanurRahmanSumon-CV.pdf"
                         class="border-2 border-blue-500 text-blue-500 font-bold py-3 px-8 rounded-full text-lg hover:bg-blue-500 hover:text-white transition-colors">
                         Download CV
                     </a>
@@ -403,52 +352,6 @@
                 </div>
             </section>
 
-            <!-- Blog Section -->
-            <section id="blog" class="py-16">
-                <h2 class="text-4xl font-bold text-center mb-12 reveal">Latest Writings</h2>
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Blog Post Card 1 -->
-                    <div class="glass-card rounded-2xl reveal overflow-hidden">
-                        <img class="w-full h-48 object-cover"
-                            src="https://placehold.co/600x400/0a0a0a/3b82f6?text=Tech+Post+1"
-                            alt="Blog Post 1 Thumbnail">
-                        <div class="p-6">
-                            <span class="text-blue-400 text-sm font-semibold">JavaScript</span>
-                            <h3 class="text-2xl font-bold my-2">Mastering Asynchronous JavaScript in 2025</h3>
-                            <p class="text-slate-400 mb-4">A deep dive into the latest patterns for handling async
-                                operations, from Promises to the newest features in the pipeline.</p>
-                            <a href="#" class="font-bold text-blue-500 hover:underline">Read More &rarr;</a>
-                        </div>
-                    </div>
-                    <!-- Blog Post Card 2 -->
-                    <div class="glass-card rounded-2xl reveal overflow-hidden" style="transition-delay: 100ms;">
-                        <img class="w-full h-48 object-cover"
-                            src="https://placehold.co/600x400/0a0a0a/3b82f6?text=Tech+Post+2"
-                            alt="Blog Post 2 Thumbnail">
-                        <div class="p-6">
-                            <span class="text-blue-400 text-sm font-semibold">Web Performance</span>
-                            <h3 class="text-2xl font-bold my-2">Core Web Vitals: A Practical Guide for Developers</h3>
-                            <p class="text-slate-400 mb-4">Learn how to diagnose and fix common performance bottlenecks
-                                to deliver a lightning-fast user experience.</p>
-                            <a href="#" class="font-bold text-blue-500 hover:underline">Read More &rarr;</a>
-                        </div>
-                    </div>
-                    <!-- Blog Post Card 3 -->
-                    <div class="glass-card rounded-2xl reveal overflow-hidden" style="transition-delay: 200ms;">
-                        <img class="w-full h-48 object-cover"
-                            src="https://placehold.co/600x400/0a0a0a/3b82f6?text=Tech+Post+3"
-                            alt="Blog Post 3 Thumbnail">
-                        <div class="p-6">
-                            <span class="text-blue-400 text-sm font-semibold">React</span>
-                            <h3 class="text-2xl font-bold my-2">State Management in React: Beyond Redux</h3>
-                            <p class="text-slate-400 mb-4">Exploring modern state management libraries like Zustand and
-                                Jotai, and when to use them over traditional solutions.</p>
-                            <a href="#" class="font-bold text-blue-500 hover:underline">Read More &rarr;</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
             <!-- Contact Section -->
             <section id="contact" class="py-16 text-center">
                 <div class="reveal">
@@ -460,14 +363,14 @@
                 </div>
                 <div class="max-w-xl mx-auto mt-8 reveal container mx-auto px-4">
                     <!-- Replace YOUR_EMAIL@EXAMPLE.COM with your actual email address -->
-                    <form id="contact-form" action="https://formsubmit.co/ahsanur,cse@gmail.com" method="POST"
+                    <form id="contact-form" action="https://formsubmit.co/ahsanur.cse@gmail.com" method="POST"
                         class="glass-card rounded-2xl p-8 space-y-4">
                         <!-- FormSubmit Honeypot for spam protection -->
                         <input type="text" name="_honey" style="display:none">
                         <!-- Disable Captcha -->
                         <input type="hidden" name="_captcha" value="false">
                         <!-- Success URL -->
-                        <input type="hidden" name="_next" value="/thanks.html">
+                        <input type="hidden" name="_next" value="/thank-you.html">
 
                         <div class="flex flex-col md:flex-row gap-4">
                             <input type="text" name="name" placeholder="Your Name"
@@ -493,14 +396,14 @@
         <!-- Footer -->
         <footer class="text-center py-8 border-t border-gray-800">
             <div class="flex justify-center space-x-6 mb-4">
-                <a href="#" class="text-slate-400 hover:text-blue-500 transition-colors">
+                <a href="https://github.com/ahsanurrahmansumon" class="text-slate-400 hover:text-blue-500 transition-colors">
                     <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path fill-rule="evenodd"
                             d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.49.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z"
                             clip-rule="evenodd" />
                     </svg>
                 </a>
-                <a href="#" class="text-slate-400 hover:text-blue-500 transition-colors">
+                <a href="https://www.linkedin.com/in/ahsanurrahmansumon/" class="text-slate-400 hover:text-blue-500 transition-colors">
                     <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path
                             d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.389 0-1.601 1.086-1.601 2.206v4.249H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.337 7.433c-.017-1.174.98-2.166 2.176-2.166 1.196 0 2.174.992 2.174 2.166-.017 1.174-.978 2.166-2.174 2.166-1.196 0-2.159-.992-2.176-2.166zM6.613 16.338H4.068V7.748h2.545v8.59zM17.638 2H6.362A4.362 4.362 0 002 6.362v11.276A4.362 4.362 0 006.362 22h11.276A4.362 4.362 0 0022 17.638V6.362A4.362 4.362 0 0017.638 2z">
@@ -515,7 +418,7 @@
                     </svg>
                 </a>
             </div>
-            <p class="text-slate-400">© 2025 Ahsanur Rahman Sumon. Crafted with passion.</p>
+            <p class="text-slate-400">© <span id="current-year"></span> Ahsanur Rahman Sumon. Crafted with passion.</p>
         </footer>
     </div>
     <script src="/dir/script.js"></script>
