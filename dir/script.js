@@ -1,3 +1,12 @@
+            window.addEventListener('load', () => {
+            // --- Preloader Logic ---
+            const preloader = document.getElementById('preloader');
+            preloader.classList.add('loaded');
+            setTimeout(() => {
+                preloader.style.display = 'none';
+            }, 800); // Should be slightly longer than the CSS transition
+        });
+        
         document.addEventListener('DOMContentLoaded', () => {
             const stickyNav = document.querySelector('.sticky-nav');
             const heroSection = document.querySelector('#hero');
@@ -134,3 +143,4 @@
                 }, 4000);
             });
         });
+        
