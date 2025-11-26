@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="/icon/email-favicon.png" type="image/x-icon">
+    <!-- SEO Meta Tags -->
+    <title>Modern Email Generator - Ahsanur Rahman Sumon </title>
+    <meta name="description" content="Generate professional job application emails instantly. A free, modern tool to create cover letter emails with portfolio, GitHub, and LinkedIn integration.">
+    <meta name="keywords" content="email generator, job application, cover letter, professional email, career tool, resume builder, email template, free tool">
+    <meta name="author" content="Ahsanur Rahman Sumon">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Modern Email Generator - Professional Job Application Tool">
+    <meta property="og:description" content="Create professional job application emails in seconds with this free, modern tool.">
+    <meta property="og:site_name" content="Modern Email Generator">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Modern Email Generator">
+    <meta name="twitter:description" content="Generate professional job application emails instantly.">
+
+    <!-- Performance Optimization: Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #6366f1; /* Indigo */
+            --primary-dark: #4338ca;
+            --secondary: #ec4899; /* Pink */
+            --bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --glass-bg: rgba(255, 255, 255, 0.95);
+            --text-main: #1f2937;
+            --text-light: #6b7280;
+            --border-radius: 16px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--bg-gradient);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            margin: 0;
+            color: var(--text-main);
+            overflow-x: hidden; /* Prevent scroll during load */
+        }
+
+        /* --- PRELOADER CSS --- */
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--bg-gradient); /* Match theme background */
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 0.5s ease-out, visibility 0.5s;
+        }
+
+        .loader {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .dot {
+            width: 20px;
+            height: 20px;
+            background-color: white;
+            border-radius: 50%;
+            animation: bounce 0.6s cubic-bezier(0.19, 0.57, 0.3, 0.98) infinite alternate;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .dot:nth-child(2) {
+            animation-delay: 0.1s;
+            opacity: 0.8;
+        }
+
+        .dot:nth-child(3) {
+            animation-delay: 0.2s;
+            opacity: 0.6;
+        }
+
+        @keyframes bounce {
+            to { transform: translateY(-25px); }
+        }
+
+        /* Main Card Container */
+        .container {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            width: 100%;
+            max-width: 650px;
+            padding: 40px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: slideUpFade 0.8s ease-out forwards;
+            animation-delay: 0.5s; /* Wait for preloader */
+        }
+
+        @keyframes slideUpFade {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: var(--text-main);
+            font-size: 1.8rem;
+            margin: 0;
+            font-weight: 600;
+            background: -webkit-linear-gradient(45deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p.subtitle {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-top: 5px;
+        }
+
+        /* Footer Styles */
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(107, 114, 128, 0.1);
+        }
+
+        p.copyright {
+            font-size: 0.85rem;
+            color: var(--primary); /* Uses the indigo theme color */
+            margin: 0;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        /* Form Grid */
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .full-width {
+            grid-column: span 2;
+        }
+
+        /* Input Groups */
+        .input-group {
+            position: relative;
+            margin-bottom: 5px;
+        }
+
+        .input-group label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-bottom: 8px;
+            color: var(--text-main);
+        }
+
+        .input-wrapper {
+            position: relative;
+        }
+
+        .input-wrapper i {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #9ca3af;
+            transition: var(--transition);
+        }
+
+        input {
+            width: 100%;
+            padding: 12px 15px 12px 45px; /* Left padding for icon */
+            border: 2px solid #e5e7eb;
+            border-radius: 10px;
+            font-size: 0.95rem;
+            font-family: inherit;
+            transition: var(--transition);
+            background: #f9fafb;
+            box-sizing: border-box;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: var(--primary);
+            background: #fff;
+            box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+        }
+
+        input:focus + i, input:not(:placeholder-shown) + i {
+            color: var(--primary);
+        }
+
+        /* Optional Section */
+        .optional-section {
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px dashed #e5e7eb;
+        }
+
+        .section-title {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-light);
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        /* Toggle Switches */
+        .toggle-item {
+            margin-bottom: 15px;
+            background: #fff;
+            border: 1px solid #f3f4f6;
+            padding: 15px;
+            border-radius: 12px;
+            transition: var(--transition);
+        }
+
+        .toggle-item:hover {
+            border-color: var(--primary);
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.15);
+            background: linear-gradient(135deg, #fff 0%, rgba(99, 102, 241, 0.02) 100%);
+        }
+
+        .toggle-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .toggle-label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        .toggle-label:hover {
+            color: var(--primary);
+        }
+
+        /* Custom Switch CSS */
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 44px;
+            height: 24px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 34px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 18px;
+            width: 18px;
+            left: 3px;
+            bottom: 3px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .slider {
+            background-color: var(--primary);
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(20px);
+        }
+
+        /* Smooth Expand Animation */
+        .hidden-input-container {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-in-out, opacity 0.4s ease-in-out;
+            opacity: 0;
+        }
+
+        .hidden-input-container.open {
+            max-height: 80px; /* Adjust based on input height */
+            opacity: 1;
+            margin-top: 15px;
+        }
+
+        /* Generate Button */
+        .btn-generate {
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 25px;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-generate:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(99, 102, 241, 0.6);
+        }
+
+        .btn-generate:active {
+            transform: translateY(0);
+        }
+
+        /* Result Area */
+        .result-area {
+            margin-top: 30px;
+            display: none;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .result-card {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .result-card:hover {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            border-color: var(--primary);
+            transition: var(--transition);
+        }
+
+        .result-header {
+            background: #f1f5f9;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .result-header span {
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        .copy-btn {
+            background: white;
+            border: 1px solid #d1d5db;
+            color: var(--text-main);
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .copy-btn:hover {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            border-color: var(--primary);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+        }
+
+        textarea {
+            width: 100%;
+            height: 250px;
+            padding: 20px;
+            border: none;
+            background: transparent;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.95rem;
+            color: var(--text-main);
+            resize: none;
+            line-height: 1.6;
+            box-sizing: border-box;
+        }
+        
+        textarea:focus {
+            outline: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+            .full-width {
+                grid-column: span 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Preloader -->
+<div id="preloader">
+    <div class="loader">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        
+    </div>
+</div>
+
+<div class="container">
+    <header>
+        <h1>Email Generator</h1>
+        <p class="subtitle">Create a professional Fresher job application in seconds.</p>
+    </header>
+
+    <main>
+        <form id="detailsForm">
+            <div class="form-grid">
+
+                <!-- Position -->
+                <div class="input-group">
+                    <label for="position">Target Position</label>
+                    <div class="input-wrapper">
+                        <input type="text" id="position" placeholder="Frontend Developer" required>
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+                </div>
+            </div>
+
+            <button type="button" class="btn-generate" onclick="generateEmail()">
+                Generate Email <i class="fa-solid fa-wand-magic-sparkles" style="margin-left: 8px;"></i>
+            </button>
+        </form>
+
+        <!-- Result Area -->
+        <div class="result-area" id="resultArea">
+            <div class="result-card">
+                <div class="result-header">
+                    <span><i class="fa-regular fa-file-lines"></i> Preview</span>
+                    <button class="copy-btn" onclick="copyText()" id="copyBtn">
+                        <i class="fa-regular fa-copy"></i> Copy Text
+                    </button>
+                </div>
+                <textarea id="emailOutput" readonly></textarea>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p class="copyright">&copy; 2025 <a href="https://sumoncsedev.github.io/"> Ahsanur Rahman Sumon</a>. All Rights Reserved.</p>
+    </footer>
+</div>
+
+<script>
+    // --- Preloader Script ---
+    window.addEventListener('load', () => {
+        const preloader = document.getElementById('preloader');
+        preloader.style.opacity = '0';
+        preloader.style.visibility = 'hidden';
+    });
+
+    // --- Helper to toggle checkbox by clicking the row ---
+    // UPDATED: Now prevents conflict if clicking the toggle button directly
+    function toggleSwitch(checkboxId, event) {
+        // If the click happened on the switch itself (slider or checkbox), 
+        // we let the default HTML behavior handle it to avoid double-toggling.
+        if(event.target.closest('.switch')) {
+            return;
+        }
+
+        const checkbox = document.getElementById(checkboxId);
+        checkbox.checked = !checkbox.checked;
+        // Manually trigger the onchange event
+        checkbox.dispatchEvent(new Event('change'));
+    }
+
+    function generateEmail() {
+        const position = document.getElementById('position').value;
+
+
+        // Validation
+        if( !position ) {
+            // Simple shake animation for error
+            const btn = document.querySelector('.btn-generate');
+            btn.style.animation = 'none';
+            btn.offsetHeight; /* trigger reflow */
+            btn.style.animation = 'shake 0.5s';
+            
+            // Add red border to empty fields
+            if(!position) document.getElementById('position').style.borderColor = 'red';
+            
+            setTimeout(() => {
+                 document.querySelectorAll('input').forEach(i => i.style.borderColor = '#e5e7eb');
+            }, 2000);
+            return;
+        }
+
+        let emailBody = `Dear Hiring Manager,
+
+I am writing to express my interest in the position of ${position} as advertised recently. My qualifications, skills, and experience align closely with your requirements for this role.
+
+Please find my CV and supporting documents attached for your review. I would be delighted to discuss how I can contribute to your team and look forward to hearing from you soon about this exciting opportunity.
+
+Kind regards,
+Ahsanur Rahman Sumon
+Phone: +8801310227710, +880-1516503156
+E-mail: ahsanur.cse@gmail.com
+LinkedIn: https://www.linkedin.com/in/ahsanurrahmansumon/
+GitHub: https://github.com/ahsanurrahmansumon
+Portfolio: https://sumoncsedev.github.io/`;
+
+        const outputBox = document.getElementById('emailOutput');
+        outputBox.value = emailBody;
+        
+        const resultArea = document.getElementById('resultArea');
+        resultArea.style.display = 'block';
+        resultArea.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function copyText() {
+        const copyText = document.getElementById("emailOutput");
+        copyText.select();
+        copyText.setSelectionRange(0, 99999); 
+        
+        navigator.clipboard.writeText(copyText.value).then(() => {
+            const btn = document.getElementById('copyBtn');
+            const originalHTML = btn.innerHTML;
+            
+            btn.innerHTML = '<i class="fa-solid fa-check"></i> Copied!';
+            btn.style.background = '#d1fae5';
+            btn.style.color = '#065f46';
+            btn.style.borderColor = '#10b981';
+            
+            setTimeout(() => {
+                btn.innerHTML = originalHTML;
+                btn.style.background = 'white';
+                btn.style.color = 'var(--text-main)';
+                btn.style.borderColor = '#d1d5db';
+            }, 2000);
+        });
+    }
+
+    // Add Shake Animation Keyframes via JS for simplicity
+    const styleSheet = document.createElement("style");
+    styleSheet.innerText = `
+        @keyframes shake {
+            0% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            50% { transform: translateX(5px); }
+            75% { transform: translateX(-5px); }
+            100% { transform: translateX(0); }
+        }
+    `;
+    document.head.appendChild(styleSheet);
+</script>
+
+</body>
+</html>
